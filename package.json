@@ -1,0 +1,20 @@
+{
+  "name": "gd-projects-docs",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev --host 0.0.0.0",
+    "start": "astro dev --host 0.0.0.0",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/starlight": "^0.15.3",
+    "@sentry/astro": "^7.93.0",
+    "@spotlightjs/astro": "^1.0.9",
+    "astro": "^4.0.1",
+    "fs": "^0.0.1-security",
+    "sharp": "^0.32.5"
+  }
+}

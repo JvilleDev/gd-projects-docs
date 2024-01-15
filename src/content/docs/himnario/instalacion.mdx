@@ -1,0 +1,43 @@
+---
+title: 'Instalación del Himnario'
+description: 'Cómo descargar e instalar el proyecto'
+---
+import { LinkCard, Card } from '@astrojs/starlight/components';
+
+## Requisito previo
+Para que funcione en tu sistema, sólo necesitas dos herramientas imprescindibles, que son:
+<Card title="Node.JS" icon="setting">
+    Esta es la herramienta sobre la cual se ejecuta el proyecto.
+
+	Preferiblemente desde la versión 18 en adelante. Si no lo tienes, da clic al botón y serás redirigido a la **página de descarga oficial**, donde seleccionarás tu sistema y seguirás los pasos para la instalación.
+    
+    <LinkCard title="Descargar la última versión" href="https://nodejs.org/en/download/current"></LinkCard>
+</Card>
+
+---
+
+## Instalación
+1. Descarga el código del proyecto [aquí](https://codeload.github.com/JvilleDev/Dev-Himnario/zip/refs/heads/master).
+2. Luego, descomprime el archivo y accede a la carpeta que se creó tras descomprimir el archivo, normalmente con el nombre "`Dev-Himnario-master`".
+3. Abre un terminal en esa carpeta. Aquí hay algunos métodos para hacerlo:
+    - **Método 1:** Entra a la carpeta, y en la parte superior donde se ve la ruta, da clic, escribe `cmd` y presiona `ENTER`.
+    ![Imagen primer método](/himnario/cmd-first-method.webp) Eso te abrirá un terminal, en el que podremos escribir los comandos necesarios
+    - **Método 2 (Windows 11):** Entra a la carpeta, da clic derecho en un espacio vacío y luego dale a la opción `Abrir en Terminal`, que se ve en el cuadro de diálogo.
+    ![Imagen segundo método](/himnario/cmd-second-method.webp)
+4. En el terminal que se ha abierto, escribe el comando 
+    ```
+    npm i
+    ```
+    que se encargará de instalar las dependencias necesarias para que funcione.
+
+5. En ese mismo terminal, una vez terminada la ejecución del comando anterior, escribe el comando:
+
+    ```
+    node server.js
+    ```
+### Ya está listo
+Ahora, accede a `http://localhost:5000` como indica en el terminal, que es donde se está mostrando ahora la página.
+### Aclaración
+`localhost` hace referencia a tu equipo local, por lo que, mientras estés conectado a una red, puedes acceder a la página usando la **dirección IP** que te asigna el router seguido del puerto `5000`.
+
+Por ejemplo: `http://192.168.18.209:5000`.

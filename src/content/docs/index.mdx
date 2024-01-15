@@ -1,0 +1,24 @@
+---
+title: Documentación proyectos
+description: Se actualizará a medida que hayan cambios, o mejoras sustanciales.
+template: splash
+hero:
+  tagline: Se actualizará a medida que hayan cambios, o mejoras sustanciales.
+  image:
+    file: ../../../public/favicon.svg
+---
+
+import { Card, LinkCard, CardGrid } from '@astrojs/starlight/components';
+
+## Proyectos
+
+<CardGrid>
+	<Card title="Himnario" icon="list-format">
+		Página para presentar cantos del Himnario por medio de socket
+    <LinkCard title="Ver proyecto" href="/himnario"></LinkCard>
+	</Card>
+	<Card title="Voz a Texto" icon="add-document">
+		Tomando el dispositivo de audio predeterminado, transcribirá lo que vaya recibiendo.
+    <LinkCard title="Ver proyecto" href="/transcriptor"></LinkCard>
+	</Card>
+</CardGrid>

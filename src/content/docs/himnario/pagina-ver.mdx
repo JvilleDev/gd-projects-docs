@@ -1,0 +1,65 @@
+---
+title: 'Visualizador'
+description: 'Explicación de características relacionadas'
+---
+import { LinkCard } from '@astrojs/starlight/components';
+
+Esta página sólo se encarga de mostrar la letra recibida. Lo que cambia es la forma en que la hace, la cual se ve afectada por el enlace y la forma con la que accedes.
+
+Al entrar a la ruta `/ver` una vez que está iniciado, se puede ver de esta forma:
+![](/himnario/view-page-2.webp)
+
+## Queries disponibles
+Los queries son modificadores en el enlace, los cuales en este caso, afectan a cómo se muestra.
+Tenemos disponibles:
+- bg (Background / Fondo)
+- hs (Hide Switch / Esconder Switch)
+- slide (Diapositiva)
+
+Cada valor es un booleano que puede ser falso o verdadero (`true` o `false`), lo que activa dicha configuración.
+### bg (Background / Fondo)
+Como dice el título, significa que le agregará un fondo a la letra, por si se desea agregar a algún programa de transmisión o grabación. Recomiendo activarlo cuando `slide` no está activado (Continúa leyendo y verás por qué).
+
+Así se vería:
+![](/himnario/view-page-1.webp)
+
+#### El enlace para activarlo sería así:
+```URL
+http://tu-ip:5000/ver?bg=true
+```
+
+---
+
+### hs (Hide Switch / Esconder Switch)
+
+En la parte superior izquierda hay un switch que permite alternar entre si `slide` está activo o no, por lo que lo mejor es desactivarlo o recortar esa parte si se va a mostrar al público.
+
+Así se vería la diferencia:
+![](/himnario/view-page-0.webp)
+#### El enlace para ocultarlo sería así:
+```URL
+http://tu-ip:5000/ver?hs=true
+```
+
+---
+
+### slide (Slide Mode / Modo diapositiva)
+Hace que el tamaño de la letra aumente para que quede "Pantalla Completa". Para activarlo, puedes agregar en el enlace el query `slide=true` para activarlo, o activar el switch dando clic (si no lo tienes apagado con el query `hs`).
+![](/himnario/view-page-3.webp)
+
+#### El enlace para activarlo sería así:
+```URL
+http://tu-ip:5000/ver?hs=true
+```
+
+---
+
+## Acumulación de queries
+Puedes hacer uso de varias configuraciones a la vez. Para esto, el primer query que añadas al enlace debe estar precedido de un `?` y después, los demás que vayas agregando, debes precederlos de `&`.
+
+Por ejemplo, si quieres activar el fondo y apagar el switch, podrías hacer algo así:
+```URL
+http//tu-ip:5000/ver?bg=true&hs=true
+```
+**Se vería así**
+![](/himnario/view-page-4.webp)

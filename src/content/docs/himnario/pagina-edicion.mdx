@@ -1,0 +1,31 @@
+---
+title: 'Página de edición'
+description: 'Explicación sobre dicha página'
+---
+import { LinkCard } from '@astrojs/starlight/components';
+
+Esta página también es bastante sencilla, pues tenemos, a grandes rasgos, 3 elementos:
+- **Elemento A:** Tabla que muestra los himnos actualmente con la información pertinente.
+- **Elemento B:** Cada fila corresponde a un himno, el cual a su vez posee ciertas acciones que puede realizar, las cuales son editar o eliminar dicho canto.
+- **Elemento C:** Botón para agregar un himno.
+
+![](/himnario/edit-page.webp)
+
+---
+
+## Añadir un himno
+Da clic al botón `Agregar` que se ve en la página, y rellena la información necesaria.
+
+![](/himnario/edit-page-add.webp)
+
+### IMPORTANTE
+1. No hace falta agregar un verso poniendo, por ejemplo: `#1 - ¡AYÚDAME!`, pues la página lo hace automáticamente al seleccionar un himno.
+2. Para que tome correctamente las diferentes partes del himno (Estrofas, Coros, etc.), hay disponibles las siguientes palabras clave, las cuales para que sean detectadas correctamente deben estar en un verso solas.
+    - `CORO` + `algún número` (opcional)
+    - `FINAL`
+    - `PRE-CORO` (en mayúscula o minúscula está bien)
+    - `Algún número` (Para las estrofas)
+
+    Por ejemplo, la creación de un himno como se ve a la izquierda, da como resultado lo que se ve a la derecha:
+    
+    ![](/himnario/edit-page-example.webp) 
